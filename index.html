@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        button{
+            background-color: rgb(52, 52, 216);
+            color: white;
+            border: none;
+            border-radius: 11px;
+            padding: 6px 0;
+            width: 100%;
+            transition: all  0.5s;
+        }
+        button:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        button:disabled{
+            opacity: 0.3;
+        }
+        .lamp {
+        width: 190px;
+        height: 320px;
+        /* background-image: url(./lampoff.png); Default color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        }
+        
+        .lamp.on {
+            background-color: yellow; /* Color when turned on */
+        }
+    </style>
+    <!-- <div class="container">
+        <section id="section" class="section">
+            <button id="btn" title="limit10">+</button>
+            <h2 style="text-align: center">0</h2>
+            <button id="btn1" disabled>-</button>
+        </section>
+    </div> -->
+    <div class="lamp" onclick="toggleLamp()">
+        <span id="lampIcon">OFF</span>
+        <img id="lampoff" src="./lampoff.png" alt="">
+        <img id="on" src="" alt="">
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
