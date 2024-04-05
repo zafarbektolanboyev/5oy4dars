@@ -26,19 +26,26 @@ button2.setAttribute("onclick", "btn1Click()");
 
 // section.style.background = "#000";
 // Math.random(
+let btn = document.querySelector("#btn");
+let btn1 = document.querySelector("#btn1");
 function RandomColor(){
     let randomNum1 = Math.floor(Math.random() * 255)
     let randomNum2 = Math.floor(Math.random() * 255)
     let randomNum3 = Math.floor(Math.random() * 255)
     return `rgb(${randomNum1}, ${randomNum2}, ${randomNum3})`;
 }
-section.style.backgroundColor = RandomColor();
-section.style.backgroundImage = `linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)`;
-btnClick("backgroundImage");
-btn1Click("backgrounImage");
 
+btn.addEventListener("click", () => {
+    let deg = Math.floor(Math.random() * 180);
+    document.body.style.backgroundColor = RandomColor();
+    document.body.style.backgroundImage = `linear-gradient(${deg}deg, ${RandomColor} 0%, ${RandomColor} 46%, ${RandomColor} 100%)`;
+});
 
-
+btn1.addEventListener("click", () => {
+    let deg = Math.floor(Math.random() * 180);
+    document.body.style.backgroundColor = RandomColor();
+    document.body.style.backgroundImage = `linear-gradient(${deg}deg, ${RandomColor} 0%, ${RandomColor} 46%, ${RandomColor} 100%)`;
+});
 
 
 let lampState = false; // Initially lamp is off
