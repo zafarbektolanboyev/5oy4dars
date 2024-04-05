@@ -48,24 +48,3 @@ btn1.addEventListener("click", () => {
 });
 
 
-let lampState = false; // Initially lamp is off
-
-    function toggleLamp() {
-        const lamp = document.querySelector('.lamp');
-        const lampIcon = document.querySelector('#lampIcon');
-
-        lampState = !lampState; // Toggle the state
-
-        if (lampState) {
-            // Lamp is turned on
-            lamp.classList.add('on');
-            lampIcon.textContent = 'ON';
-        } else {
-            // Lamp  turned off
-            lamp.classList.remove('on');
-            lampIcon.textContent = 'OFF';
-            
-        }
-    }
-
-// https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh8EezOjh-eua2WfB06brX0ZspKOnDlnRuhDbBYo_hQ&s
